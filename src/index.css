@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --ring: 0 0% 7%; }
+html, body, #root { height: 100%; }
+body { @apply font-sans; }
+h1,h2,h3 { @apply font-serif tracking-tight; }
+
+
+@layer utilities {
+    .marquee { @apply overflow-hidden border-y border-black/10 bg-white; }
+    .marquee-h { height: auto; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .marquee-h-large { height: auto; padding-top: 3rem; padding-bottom: 3rem; }
+    .marquee__inner {
+      display: flex;
+      align-items: center;
+      gap: 2rem;              /* відстань між елементами */
+      width: max-content;     /* не стискати контент */
+      white-space: nowrap;    /* не переносити рядок */
+      will-change: transform;
+      animation: marquee-x 60s linear infinite;
+    }
+    .marquee__inner-fast {
+      animation: marquee-x 20s linear infinite;
+    }
+    @keyframes marquee-x {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); } /* зсув на половину, бо контент продубльовано */
+    }
+  }
+  
