@@ -4,41 +4,50 @@ import { Instagram, Video, ChevronRight, Star, Image as ImageIcon, Users, BarCha
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const HERO_IMAGE = "/portfolio/Vitalik/N1.jpg";
+// Helper function to get correct path for GitHub Pages
+const getAssetPath = (path: string): string => {
+  // Remove leading slash if present, then add base URL
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  const baseUrl = (import.meta as any).env?.BASE_URL || '/';
+  // Ensure baseUrl ends with / and path doesn't start with /
+  return `${baseUrl}${cleanPath}`;
+};
+
+const HERO_IMAGE = getAssetPath("/portfolio/Vitalik/N1.jpg");
 
 const PORTFOLIO_IMAGES: { src: string; alt: string }[] = [
 
-  { src: '/portfolio/content photo examples/7.JPG', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/17.JPG', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/31.JPG', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/46.JPG', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/47.jpg', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/Chez%20Mia%20_%20Interior%20shoot-073.jpg', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/Chez%20Mia-055.jpg', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/CHEZMIA_9-20-25_FOUREYED_D_-85.jpg', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/21.png', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/22.png', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/23.png', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/24.png', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/25.png', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/Tezza-2728.jpg', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/Tezza-3250.JPG', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/Tezza-3885.JPG', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/Tezza-7951.JPG', alt: 'Portfolio' },
-  { src: '/portfolio/content photo examples/Tezza-9940.jpg', alt: 'Portfolio' },  
+  { src: getAssetPath('/portfolio/content photo examples/7.JPG'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/17.JPG'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/31.JPG'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/46.JPG'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/47.jpg'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/Chez%20Mia%20_%20Interior%20shoot-073.jpg'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/Chez%20Mia-055.jpg'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/CHEZMIA_9-20-25_FOUREYED_D_-85.jpg'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/21.png'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/22.png'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/23.png'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/24.png'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/25.png'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/Tezza-2728.jpg'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/Tezza-3250.JPG'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/Tezza-3885.JPG'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/Tezza-7951.JPG'), alt: 'Portfolio' },
+  { src: getAssetPath('/portfolio/content photo examples/Tezza-9940.jpg'), alt: 'Portfolio' },  
 ];
 
 const CLIENT_LOGOS: { src: string; alt: string }[] = [];
 
 // Image marquee for Client Highlights
 const CLIENT_HIGHLIGHT_IMAGES: { src: string; alt: string }[] = [
-  { src: '/portfolio/Companies%20i%20worked%20with/Untitled%20design-2.png', alt: 'Client Logo' },
-  { src: '/portfolio/Companies%20i%20worked%20with/Official%20Logo.png', alt: 'Client Logo' },
-  { src: '/portfolio/Companies%20i%20worked%20with/IMG_1041-removebg-preview.png', alt: 'Client Logo' },
-  { src: '/portfolio/Companies%20i%20worked%20with/IMG_0392-removebg-preview.png', alt: 'Client Logo' },
-  { src: '/portfolio/Companies%20i%20worked%20with/Group%204.PNG', alt: 'Client Logo' },
-  { src: '/portfolio/Companies%20i%20worked%20with/ChezMia_Wordmark_Blue.png', alt: 'Chez Mia Wordmark' },
-  { src: '/portfolio/Companies%20i%20worked%20with/BBN_BF_LOGO_30x30.png', alt: 'BBN Logo' },
+  { src: getAssetPath('/portfolio/Companies%20i%20worked%20with/Untitled%20design-2.png'), alt: 'Client Logo' },
+  { src: getAssetPath('/portfolio/Companies%20i%20worked%20with/Official%20Logo.png'), alt: 'Client Logo' },
+  { src: getAssetPath('/portfolio/Companies%20i%20worked%20with/IMG_1041-removebg-preview.png'), alt: 'Client Logo' },
+  { src: getAssetPath('/portfolio/Companies%20i%20worked%20with/IMG_0392-removebg-preview.png'), alt: 'Client Logo' },
+  { src: getAssetPath('/portfolio/Companies%20i%20worked%20with/Group%204.PNG'), alt: 'Client Logo' },
+  { src: getAssetPath('/portfolio/Companies%20i%20worked%20with/ChezMia_Wordmark_Blue.png'), alt: 'Chez Mia Wordmark' },
+  { src: getAssetPath('/portfolio/Companies%20i%20worked%20with/BBN_BF_LOGO_30x30.png'), alt: 'BBN Logo' },
 ];
 
 const container = {
@@ -280,7 +289,7 @@ function About() {
             {/* Зліва - N2.JPG (менша висота) */}
             <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
               <img 
-                src="/portfolio/Vitalik/N2.JPG" 
+                src={getAssetPath("/portfolio/Vitalik/N2.JPG")} 
                 alt="Portfolio work" 
                 className="aspect-[3/4] w-full object-cover transition duration-300 group-hover:scale-[1.03]" 
               />
@@ -289,7 +298,7 @@ function About() {
             {/* Посередині - відео (найвища) */}
             <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200 relative">
               <video 
-                src="/portfolio/Vitalik/F9E5D1BA-C8F7-417B-8EFD-E423BBC83B27.MP4" 
+                src={getAssetPath("/portfolio/Vitalik/F9E5D1BA-C8F7-417B-8EFD-E423BBC83B27.MP4")} 
                 className="aspect-[3/5] w-full object-cover transition duration-300 group-hover:scale-[1.03] cursor-pointer"
                 loop
                 playsInline
@@ -329,7 +338,7 @@ function About() {
             {/* Справа - N3.JPG (менша висота) */}
             <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
               <img 
-                src="/portfolio/Vitalik/N3.JPG" 
+                src={getAssetPath("/portfolio/Vitalik/N3.JPG")} 
                 alt="Portfolio work" 
                 className="aspect-[3/4] w-full object-cover transition duration-300 group-hover:scale-[1.03]" 
               />
@@ -362,7 +371,7 @@ function About() {
                 <div className="bg-white p-4 shadow-lg rounded-lg">
                   <div className="overflow-hidden rounded-sm">
                     <img 
-                      src="/portfolio/Vitalik/N4.JPG" 
+                      src={getAssetPath("/portfolio/Vitalik/N4.JPG")} 
                       alt="My Method" 
                       className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:scale-[1.03]" 
                     />
@@ -378,7 +387,7 @@ function About() {
               <div className="flex flex-col justify-between h-full gap-3 md:gap-4 w-full max-w-sm mx-auto">
                  {/* Блок 1 */}
                  <div className="rounded-2xl overflow-hidden relative" style={{ backgroundColor: 'transparent' }}>
-                   <div className="absolute inset-0" style={{ backgroundImage: 'url(/portfolio/Vitalik/AboutBG_Pink.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
+                   <div className="absolute inset-0" style={{ backgroundImage: `url(${getAssetPath('/portfolio/Vitalik/AboutBG_Pink.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
                    <div className="p-4 md:p-6 text-center relative z-10">
                      <div className="text-2xl md:text-3xl font-serif font-semibold mb-1 md:mb-2 text-black">4+ years</div>
                      <div className="text-xs md:text-sm text-black font-serif">IN MARKETING</div>
@@ -387,7 +396,7 @@ function About() {
 
                  {/* Блок 2 */}
                  <div className="rounded-2xl overflow-hidden relative" style={{ backgroundColor: 'transparent' }}>
-                   <div className="absolute inset-0" style={{ backgroundImage: 'url(/portfolio/Vitalik/AboutBG_White.png)', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
+                   <div className="absolute inset-0" style={{ backgroundImage: `url(${getAssetPath('/portfolio/Vitalik/AboutBG_White.png')})`, backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
                    <div className="p-4 md:p-6 text-center relative z-10">
                      <div className="text-2xl md:text-3xl font-serif font-semibold mb-1 md:mb-2 text-black">30M+</div>
                      <div className="text-xs md:text-sm text-black font-serif">CAMPAIGN VIEWS</div>
@@ -396,7 +405,7 @@ function About() {
 
                  {/* Блок 3 */}
                  <div className="rounded-2xl overflow-hidden relative" style={{ backgroundColor: 'transparent' }}>
-                   <div className="absolute inset-0" style={{ backgroundImage: 'url(/portfolio/Vitalik/AboutBG_Pink.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
+                   <div className="absolute inset-0" style={{ backgroundImage: `url(${getAssetPath('/portfolio/Vitalik/AboutBG_Pink.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
                    <div className="p-4 md:p-6 text-center relative z-10">
                      <div className="text-2xl md:text-3xl font-serif font-semibold mb-1 md:mb-2 text-black">50+</div>
                      <div className="text-xs md:text-sm text-black font-serif">EVENTS</div>
@@ -405,7 +414,7 @@ function About() {
 
                  {/* Блок 4 */}
                  <div className="rounded-2xl overflow-hidden relative" style={{ backgroundColor: 'transparent' }}>
-                   <div className="absolute inset-0" style={{ backgroundImage: 'url(/portfolio/Vitalik/AboutBG_White.png)', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
+                   <div className="absolute inset-0" style={{ backgroundImage: `url(${getAssetPath('/portfolio/Vitalik/AboutBG_White.png')})`, backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
                    <div className="p-4 md:p-6 text-center relative z-10">
                      <div className="text-2xl md:text-3xl font-serif font-semibold mb-1 md:mb-2 text-black">5</div>
                      <div className="text-xs md:text-sm text-black font-serif">RESTAURANT OPENINGS</div>
@@ -414,7 +423,7 @@ function About() {
 
                  {/* Блок 5 */}
                  <div className="rounded-2xl overflow-hidden relative" style={{ backgroundColor: 'transparent' }}>
-                   <div className="absolute inset-0" style={{ backgroundImage: 'url(/portfolio/Vitalik/AboutBG_Pink.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
+                   <div className="absolute inset-0" style={{ backgroundImage: `url(${getAssetPath('/portfolio/Vitalik/AboutBG_Pink.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'multiply' }}></div>
                    <div className="p-4 md:p-6 text-center relative z-10">
                      <div className="text-2xl md:text-3xl font-serif font-semibold mb-1 md:mb-2 text-black">+600%</div>
                      <div className="text-xs md:text-sm text-black font-serif">PROFILE VISITS WITHIN FIRST MONTH</div>
@@ -445,7 +454,7 @@ function Services() {
   ];
   return (
     <section id="services" className="relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url(/portfolio/Vitalik/AboutBG_Pink.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+      <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${getAssetPath('/portfolio/Vitalik/AboutBG_Pink.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-50/80 via-transparent to-zinc-50/80"></div>
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-16">
         <SectionTitle title="Services" />
@@ -524,7 +533,7 @@ function Services() {
                   <div className="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6">
                     <div className="text-center">
                       <div className="relative overflow-hidden rounded-xl shadow-lg ring-2 ring-black/10 bg-gray-100 mb-2">
-                        <img src="/portfolio/Vitalik/N5.jpg" alt="Social Media Example 1" className="object-cover aspect-[3/4]" />
+                        <img src={getAssetPath("/portfolio/Vitalik/N5.jpg")} alt="Social Media Example 1" className="object-cover aspect-[3/4]" />
                       </div>
                       <div className="text-xs text-gray-600">
                         Post overview
@@ -532,7 +541,7 @@ function Services() {
                     </div>
                     <div className="text-center">
                       <div className="relative overflow-hidden rounded-xl shadow-lg ring-2 ring-black/10 bg-gray-100 mb-2">
-                        <img src="/portfolio/Vitalik/N6.jpg" alt="Social Media Example 2" className="object-cover aspect-[3/4]" />
+                        <img src={getAssetPath("/portfolio/Vitalik/N6.jpg")} alt="Social Media Example 2" className="object-cover aspect-[3/4]" />
                       </div>
                       <div className="text-xs text-gray-600">
                         Profile activity within 30 days
@@ -540,7 +549,7 @@ function Services() {
                     </div>
                     <div className="text-center">
                       <div className="relative overflow-hidden rounded-xl shadow-lg ring-2 ring-black/10 bg-gray-100 mb-2">
-                        <img src="/portfolio/Vitalik/N7.jpg" alt="Social Media Example 3" className="object-cover aspect-[3/4]" />
+                        <img src={getAssetPath("/portfolio/Vitalik/N7.jpg")} alt="Social Media Example 3" className="object-cover aspect-[3/4]" />
                       </div>
                       <div className="text-xs text-gray-600">
                         Influencer's collaboration
@@ -548,7 +557,7 @@ function Services() {
                     </div>
                     <div className="text-center">
                       <div className="relative overflow-hidden rounded-xl shadow-lg ring-2 ring-black/10 bg-gray-100 mb-2">
-                        <img src="/portfolio/Vitalik/N8.jpg" alt="Social Media Example 4" className="object-cover aspect-[3/4]" />
+                        <img src={getAssetPath("/portfolio/Vitalik/N8.jpg")} alt="Social Media Example 4" className="object-cover aspect-[3/4]" />
                       </div>
                       <div className="text-xs text-gray-600">
                         Page overview
@@ -560,16 +569,16 @@ function Services() {
               {selectedService === 'Influencer Partnerships' && (
                 <div className="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6">
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Events&Influencers/Influencers Event.JPG" alt="Influencers Event" className="object-cover aspect-[4/5]" />
+                    <img src={getAssetPath("/portfolio/Events&Influencers/Influencers Event.JPG")} alt="Influencers Event" className="object-cover aspect-[4/5]" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Vitalik/N10.jpg" alt="N10" className="object-cover aspect-[4/5]" />
+                    <img src={getAssetPath("/portfolio/Vitalik/N10.jpg")} alt="N10" className="object-cover aspect-[4/5]" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Vitalik/N11.jpg" alt="N11" className="object-cover aspect-[4/5]" />
+                    <img src={getAssetPath("/portfolio/Vitalik/N11.jpg")} alt="N11" className="object-cover aspect-[4/5]" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Vitalik/N12.jpg" alt="N12" className="object-cover aspect-[4/5]" />
+                    <img src={getAssetPath("/portfolio/Vitalik/N12.jpg")} alt="N12" className="object-cover aspect-[4/5]" />
                   </div>
                 </div>
               )}
@@ -578,25 +587,25 @@ function Services() {
                 <div className="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6">
                   <div>
                     <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                      <img src="/portfolio/Events&Influencers/Cyklar P.JPG" alt="Cyklar P" className="object-cover aspect-square" />
+                      <img src={getAssetPath("/portfolio/Events&Influencers/Cyklar P.JPG")} alt="Cyklar P" className="object-cover aspect-square" />
                     </div>
                     <div className="p-3 text-xs text-zinc-600">Cyklar Product Launch</div>
                   </div>
                   <div>
                     <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                      <img src="/portfolio/Events&Influencers/Summer Fridays Launch Event.JPG" alt="Summer Fridays Launch Event" className="object-cover aspect-square" />
+                      <img src={getAssetPath("/portfolio/Events&Influencers/Summer Fridays Launch Event.JPG")} alt="Summer Fridays Launch Event" className="object-cover aspect-square" />
                     </div>
                     <div className="p-3 text-xs text-zinc-600">Summer Fridays Launch Event</div>
                   </div>
                   <div>
                     <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                      <img src="/portfolio/Events&Influencers/Esports Awards Afterparty.png" alt="Esports Awards Afterparty" className="object-cover aspect-square" />
+                      <img src={getAssetPath("/portfolio/Events&Influencers/Esports Awards Afterparty.png")} alt="Esports Awards Afterparty" className="object-cover aspect-square" />
                     </div>
                     <div className="p-3 text-xs text-zinc-600">Esports Awards Afterparty</div>
                   </div>
                   <div>
                     <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                      <img src="/portfolio/Events&Influencers/Influencers Event.JPG" alt="Influencers Event" className="object-cover aspect-square" />
+                      <img src={getAssetPath("/portfolio/Events&Influencers/Influencers Event.JPG")} alt="Influencers Event" className="object-cover aspect-square" />
                     </div>
                     <div className="p-3 text-xs text-zinc-600">Influencers Event</div>
                   </div>
@@ -606,16 +615,16 @@ function Services() {
               {selectedService === 'Campaigns & Partnerships' && (
                 <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4">
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Activations&Partnerships/OYSTERS LOVER HOUR-7.jpg" alt="OYSTERS LOVER HOUR-7" className="object-cover aspect-[3/4]" />
+                    <img src={getAssetPath("/portfolio/Activations&Partnerships/OYSTERS LOVER HOUR-7.jpg")} alt="OYSTERS LOVER HOUR-7" className="object-cover aspect-[3/4]" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Activations&Partnerships/1.png" alt="1" className="object-cover aspect-[3/4]" />
+                    <img src={getAssetPath("/portfolio/Activations&Partnerships/1.png")} alt="1" className="object-cover aspect-[3/4]" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Activations&Partnerships/2.png" alt="2" className="object-cover aspect-[3/4]" />
+                    <img src={getAssetPath("/portfolio/Activations&Partnerships/2.png")} alt="2" className="object-cover aspect-[3/4]" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Activations&Partnerships/3.png" alt="3" className="object-cover aspect-[3/4]" />
+                    <img src={getAssetPath("/portfolio/Activations&Partnerships/3.png")} alt="3" className="object-cover aspect-[3/4]" />
                   </div>
                 </div>
               )}
@@ -623,16 +632,16 @@ function Services() {
               {selectedService === 'Graphic Design' && (
                 <div className="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6">
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Vitalik/N13.png" alt="N13" className="object-cover aspect-[3/4]" />
+                    <img src={getAssetPath("/portfolio/Vitalik/N13.png")} alt="N13" className="object-cover aspect-[3/4]" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Vitalik/N14.png" alt="N14" className="object-cover aspect-[3/4]" />
+                    <img src={getAssetPath("/portfolio/Vitalik/N14.png")} alt="N14" className="object-cover aspect-[3/4]" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Vitalik/N15.jpg" alt="N15" className="object-cover aspect-[3/4] object-bottom" />
+                    <img src={getAssetPath("/portfolio/Vitalik/N15.jpg")} alt="N15" className="object-cover aspect-[3/4] object-bottom" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src="/portfolio/Activations&Partnerships/3.png" alt="3" className="object-cover aspect-[3/4]" />
+                    <img src={getAssetPath("/portfolio/Activations&Partnerships/3.png")} alt="3" className="object-cover aspect-[3/4]" />
                   </div>
                 </div>
               )}
@@ -657,15 +666,15 @@ function PhotoVideoExamples() {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   
   const examples = [
-    { type: 'image', src: '/portfolio/content photo examples/Chez Mia _ Interior shoot-073.jpg', alt: 'Interior Photography' },
-    { type: 'video', src: '/portfolio/Vitalik/2025.09.27 influ video .MP4', alt: 'Influencer Video' },
-    { type: 'image', src: '/portfolio/content photo examples/Chez Mia-055.jpg', alt: 'Food Photography' },
-    { type: 'image', src: '/portfolio/Events&Influencers/Influencers Event.JPG', alt: 'Event Photography' },
-    { type: 'video', src: '/portfolio/Vitalik/copy_6A1F0CDF-33CA-46A2-9273-C4AD5552033A.MP4', alt: 'Creative Video' },
-    { type: 'image', src: '/portfolio/content photo examples/Tezza-2728.jpg', alt: 'Portrait Photography' },
-    { type: 'image', src: '/portfolio/content photo examples/21.png', alt: 'Event Coverage' },
-    { type: 'video', src: '/portfolio/Vitalik/Instagram.MP4', alt: 'Instagram Content' },
-    { type: 'image', src: '/portfolio/content photo examples/Tezza-3250.JPG', alt: 'Lifestyle Photography' },
+    { type: 'image', src: getAssetPath('/portfolio/content photo examples/Chez Mia _ Interior shoot-073.jpg'), alt: 'Interior Photography' },
+    { type: 'video', src: getAssetPath('/portfolio/Vitalik/2025.09.27 influ video .MP4'), alt: 'Influencer Video' },
+    { type: 'image', src: getAssetPath('/portfolio/content photo examples/Chez Mia-055.jpg'), alt: 'Food Photography' },
+    { type: 'image', src: getAssetPath('/portfolio/Events&Influencers/Influencers Event.JPG'), alt: 'Event Photography' },
+    { type: 'video', src: getAssetPath('/portfolio/Vitalik/copy_6A1F0CDF-33CA-46A2-9273-C4AD5552033A.MP4'), alt: 'Creative Video' },
+    { type: 'image', src: getAssetPath('/portfolio/content photo examples/Tezza-2728.jpg'), alt: 'Portrait Photography' },
+    { type: 'image', src: getAssetPath('/portfolio/content photo examples/21.png'), alt: 'Event Coverage' },
+    { type: 'video', src: getAssetPath('/portfolio/Vitalik/Instagram.MP4'), alt: 'Instagram Content' },
+    { type: 'image', src: getAssetPath('/portfolio/content photo examples/Tezza-3250.JPG'), alt: 'Lifestyle Photography' },
   ];
 
   const getItemsPerSlide = () => {
@@ -830,14 +839,14 @@ function Portfolio() {
 
 // Client Highlights Section
 const CLIENT_HIGHLIGHT_LOGOS: { src: string; alt: string }[] = [
-  { src: '/portfolio/Companies%20i%20worked%20with/ChezMia_LogoLockup_ChezMiaBlue.png', alt: 'Chez Mia Logo' },
-  { src: '/portfolio/Companies%20i%20worked%20with/ChezMia_Wordmark_Blue.png', alt: 'Chez Mia Wordmark' },
+  { src: getAssetPath('/portfolio/Companies%20i%20worked%20with/ChezMia_LogoLockup_ChezMiaBlue.png'), alt: 'Chez Mia Logo' },
+  { src: getAssetPath('/portfolio/Companies%20i%20worked%20with/ChezMia_Wordmark_Blue.png'), alt: 'Chez Mia Wordmark' },
 ];
 
 const BEFORE_AFTER_PAIRS: { before: string; after: string }[] = [
-  { before: '/portfolio/Before_After/Chez%20Mia1%20(1).jpg', after: '/portfolio/Before_After/Chez%20Mia%20After.jpeg' },
-  { before: '/portfolio/Before_After/Brute%20Before.jpg', after: '/portfolio/Before_After/Brute%20After.jpeg' },
-  { before: '/portfolio/Before_After/BBN1.png', after: '/portfolio/Before_After/BBN2.png' },
+  { before: getAssetPath('/portfolio/Before_After/Chez%20Mia1%20(1).jpg'), after: getAssetPath('/portfolio/Before_After/Chez%20Mia%20After.jpeg') },
+  { before: getAssetPath('/portfolio/Before_After/Brute%20Before.jpg'), after: getAssetPath('/portfolio/Before_After/Brute%20After.jpeg') },
+  { before: getAssetPath('/portfolio/Before_After/BBN1.png'), after: getAssetPath('/portfolio/Before_After/BBN2.png') },
 ];
 
 function ClientHighlights() {
