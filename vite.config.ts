@@ -12,4 +12,14 @@ export default defineConfig({
   // Якщо ваш репозиторій називається username.github.io, змініть base на '/'
   // Якщо репозиторій називається 'olha-portfolio-full', залиште '/olha-portfolio-full/'
   base: '/olha-portfolio-full/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 })
