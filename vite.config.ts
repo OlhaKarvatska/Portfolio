@@ -6,8 +6,13 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  resolve: { alias: { '@': path.resolve(__dirname, './src') } },
-  base: '/Portfolio/',
+export default defineConfig(({ command }) => {
+  // For dev server use '/', for production build use '/Portfolio/'
+  const base = command === 'serve' ? '/' : '/Portfolio/';
+  
+  return {
+    plugins: [react()],
+    resolve: { alias: { '@': path.resolve(__dirname, './src') } },
+    base: base,
+  };
 })
