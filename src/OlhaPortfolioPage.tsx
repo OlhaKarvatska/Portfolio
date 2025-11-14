@@ -6,11 +6,15 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 // Helper function to get correct path for GitHub Pages
 const getAssetPath = (path: string): string => {
-  // Remove leading slash if present, then add base URL
+  // Remove leading slash if present
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  // Get base URL from Vite env (automatically set by vite.config.ts)
+  // Vite injects BASE_URL during build based on the 'base' config
+  // For dev: '/', for production build: '/Portfolio/'
   const baseUrl = (import.meta as any).env?.BASE_URL || '/';
   // Ensure baseUrl ends with / and path doesn't start with /
-  return `${baseUrl}${cleanPath}`;
+  const normalizedBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  return `${normalizedBase}${cleanPath}`;
 };
 
 const HERO_IMAGE = getAssetPath("/portfolio/Vitalik/N1.jpg");
