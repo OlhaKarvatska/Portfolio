@@ -4,7 +4,7 @@ import { Instagram, Video, ChevronRight, Star, Image as ImageIcon, Users, BarCha
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const asset = (path: string) => new URL(path, (import.meta as any).env?.BASE_URL || '/').toString();
+const asset = (path: string) => new URL(path, (import.meta as any).env.BASE_URL).toString();
 
 const HERO_IMAGE = asset('portfolio/Vitalik/N1.jpg');
 
