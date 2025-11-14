@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "build:gh": "vite build --base=/Portfolio/",
-    "deploy": "npm run build:gh && gh-pages -d dist"
+    "deploy": "powershell -ExecutionPolicy Bypass -File ./deploy.ps1",
+    "deploy:gh-pages": "npm run build:gh && npx gh-pages -d dist --repo https://github.com/OlhaKarvatska/Portfolio.git",
+    "deploy:manual": "npm run build:gh && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "framer-motion": "^11.0.0",

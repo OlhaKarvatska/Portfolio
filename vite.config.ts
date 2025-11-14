@@ -9,9 +9,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export default defineConfig(({ command, mode }) => {
   // Для локальної розробки (dev server) використовуємо '/'
   // Для production build використовуємо '/Portfolio/' для GitHub Pages
-  // Якщо base передається через --base в команді, він має пріоритет
   const isDev = command === 'serve';
   const base = isDev ? '/' : '/Portfolio/';
+  
+  console.log(`Vite config: command=${command}, mode=${mode}, base=${base}`);
   
   return {
     plugins: [react()],
