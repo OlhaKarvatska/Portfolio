@@ -890,12 +890,12 @@ function ClientHighlights() {
 
           {/* Current pair */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 flex-1 order-1 md:order-2 w-full md:w-auto">
-            <div className="flex-shrink-0 w-full max-w-xs sm:max-w-sm md:w-64 md:max-w-none h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-zinc-200">
+            <div className="flex-shrink-0 w-full max-w-xs sm:max-w-sm md:w-64 md:max-w-none h-[512px] sm:h-80 md:h-96 lg:h-[500px] overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-zinc-200">
               <img src={BEFORE_AFTER_PAIRS[currentPairIndex].before} alt={`Before ${currentPairIndex + 1}`} className="w-full h-full object-cover" />
             </div>
             {/* Arrow between images */}
             <ArrowRight className="h-8 w-8 md:h-10 md:w-10 text-zinc-600 flex-shrink-0 rotate-90 md:rotate-0" />
-            <div className="flex-shrink-0 w-full max-w-xs sm:max-w-sm md:w-64 md:max-w-none h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-zinc-200">
+            <div className="flex-shrink-0 w-full max-w-xs sm:max-w-sm md:w-64 md:max-w-none h-[512px] sm:h-80 md:h-96 lg:h-[500px] overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-zinc-200">
               <img src={BEFORE_AFTER_PAIRS[currentPairIndex].after} alt={`After ${currentPairIndex + 1}`} className="w-full h-full object-cover" />
             </div>
           </div>
