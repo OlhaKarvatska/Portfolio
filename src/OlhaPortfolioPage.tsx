@@ -4,7 +4,12 @@ import { Instagram, Video, ChevronRight, Star, Image as ImageIcon, Users, BarCha
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const asset = (path: string) => (import.meta as { env: { BASE_URL: string } }).env.BASE_URL + path;
+const asset = (path: string) => {
+  const baseUrl = (import.meta as { env: { BASE_URL: string } }).env.BASE_URL;
+  // Use encodeURI to encode the path while preserving slashes
+  // This handles spaces and special characters in file names
+  return baseUrl + encodeURI(path);
+};
 
 const HERO_IMAGE = asset('portfolio/Vitalik/N1.jpg');
 
@@ -291,7 +296,7 @@ function About() {
             {/* Посередині - відео (найвища) */}
             <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200 relative">
               <video 
-                src={asset('portfolio/Vitalik/F9E5D1BA-C8F7-417B-8EFD-E423BBC83B27.mp4')} 
+                src={asset('portfolio/Vitalik/video1.mp4')} 
                 poster={asset('portfolio/Posters_video/Introduction.png')}
                 className="aspect-[3/5] w-full object-cover transition duration-300 group-hover:scale-[1.03] cursor-pointer"
                 loop
@@ -662,13 +667,13 @@ function PhotoVideoExamples() {
   
   const examples = [
     { type: 'image', src: asset('portfolio/content photo examples/Chez Mia _ Interior shoot-073.jpg'), alt: 'Interior Photography' },
-    { type: 'video', src: asset('portfolio/Vitalik/2025.09.27%20influ%20video.mp4'), poster: asset('portfolio/Posters_video/Video_Examples_1.png'), alt: 'Influencer Video' },
+    { type: 'video', src: asset('portfolio/Vitalik/video2.mp4'), poster: asset('portfolio/Posters_video/Video_Examples_1.png'), alt: 'Influencer Video' },
     { type: 'image', src: asset('portfolio/content photo examples/Chez Mia-055.jpg'), alt: 'Food Photography' },
     { type: 'image', src: asset('portfolio/Events&Influencers/Influencers Event.JPG'), alt: 'Event Photography' },
-    { type: 'video', src: asset('portfolio/Vitalik/copy_6A1F0CDF-33CA-46A2-9273-C4AD5552033A.mp4'), poster: asset('portfolio/Posters_video/Video_Examples_2.png'), alt: 'Creative Video' },
+    { type: 'video', src: asset('portfolio/Vitalik/video3.mp4'), poster: asset('portfolio/Posters_video/Video_Examples_2.png'), alt: 'Creative Video' },
     { type: 'image', src: asset('portfolio/content photo examples/Tezza-2728.jpg'), alt: 'Portrait Photography' },
     { type: 'image', src: asset('portfolio/content photo examples/21.png'), alt: 'Event Coverage' },
-    { type: 'video', src: asset('portfolio/Vitalik/Instagram.mp4'), poster: asset('portfolio/Posters_video/Video_Examples_3.png'), alt: 'Instagram Content' },
+    { type: 'video', src: asset('portfolio/Vitalik/video4.mp4'), poster: asset('portfolio/Posters_video/Video_Examples_3.png'), alt: 'Instagram Content' },
     { type: 'image', src: asset('portfolio/content photo examples/Tezza-3250.JPG'), alt: 'Lifestyle Photography' },
   ];
 
