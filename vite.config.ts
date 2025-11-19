@@ -13,5 +13,10 @@ export default defineConfig(({ command }) => {
     plugins: [react()],
     resolve: { alias: { '@': path.resolve(__dirname, './src') } },
     base: '/Portfolio/',
+    build: {
+      outDir: 'docs',
+      assetsDir: 'assets',
+      copyPublicDir: true,
+    },
   };
 })

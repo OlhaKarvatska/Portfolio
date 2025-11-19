@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const asset = (path: string) => {
   const baseUrl = (import.meta as { env: { BASE_URL: string } }).env.BASE_URL;
-  // Use encodeURI to encode the path while preserving slashes
-  // This handles spaces and special characters in file names
-  return baseUrl + encodeURI(path);
+  // Ensure path doesn't start with a slash
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return baseUrl + cleanPath;
 };
 
 const HERO_IMAGE = asset('portfolio/Vitalik/N1.jpg');
