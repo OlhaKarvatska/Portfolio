@@ -289,7 +289,9 @@ function About() {
               <img 
                 src={asset('portfolio/Vitalik/N2.JPG')} 
                 alt="Portfolio work" 
-                className="aspect-[3/4] w-full object-cover transition duration-300 group-hover:scale-[1.03]" 
+                className="aspect-[3/4] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -340,7 +342,9 @@ function About() {
               <img 
                 src={asset('portfolio/Vitalik/N3.JPG')} 
                 alt="Portfolio work" 
-                className="aspect-[3/4] w-full object-cover transition duration-300 group-hover:scale-[1.03]" 
+                className="aspect-[3/4] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -373,7 +377,9 @@ function About() {
                     <img 
                       src={asset('portfolio/Vitalik/N4.JPG')} 
                       alt="My Method" 
-                      className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:scale-[1.03]" 
+                      className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   {/* Біла рамка внизу полароїда */}
@@ -533,7 +539,7 @@ function Services() {
                   <div className="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6">
                     <div className="text-center">
                       <div className="relative overflow-hidden rounded-xl shadow-lg ring-2 ring-black/10 bg-gray-100 mb-2">
-                        <img src={asset('portfolio/Vitalik/N5.jpg')} alt="Social Media Example 1" className="object-cover aspect-[3/4]" />
+                        <img src={asset('portfolio/Vitalik/N5.jpg')} alt="Social Media Example 1" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                       </div>
                       <div className="text-xs text-gray-600">
                         Post overview
@@ -541,7 +547,7 @@ function Services() {
                     </div>
                     <div className="text-center">
                       <div className="relative overflow-hidden rounded-xl shadow-lg ring-2 ring-black/10 bg-gray-100 mb-2">
-                        <img src={asset('portfolio/Vitalik/N6.jpg')} alt="Social Media Example 2" className="object-cover aspect-[3/4]" />
+                        <img src={asset('portfolio/Vitalik/N6.jpg')} alt="Social Media Example 2" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                       </div>
                       <div className="text-xs text-gray-600">
                         Profile activity within 30 days
@@ -549,7 +555,7 @@ function Services() {
                     </div>
                     <div className="text-center">
                       <div className="relative overflow-hidden rounded-xl shadow-lg ring-2 ring-black/10 bg-gray-100 mb-2">
-                        <img src={asset('portfolio/Vitalik/N7.jpg')} alt="Social Media Example 3" className="object-cover aspect-[3/4]" />
+                        <img src={asset('portfolio/Vitalik/N7.jpg')} alt="Social Media Example 3" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                       </div>
                       <div className="text-xs text-gray-600">
                         Influencer's collaboration
@@ -557,7 +563,7 @@ function Services() {
                     </div>
                     <div className="text-center">
                       <div className="relative overflow-hidden rounded-xl shadow-lg ring-2 ring-black/10 bg-gray-100 mb-2">
-                        <img src={asset('portfolio/Vitalik/N8.jpg')} alt="Social Media Example 4" className="object-cover aspect-[3/4]" />
+                        <img src={asset('portfolio/Vitalik/N8.jpg')} alt="Social Media Example 4" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                       </div>
                       <div className="text-xs text-gray-600">
                         Page overview
@@ -569,16 +575,16 @@ function Services() {
               {selectedService === 'Influencer Partnerships' && (
                 <div className="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6">
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Events&Influencers/Influencers Event.JPG')} alt="Influencers Event" className="object-cover aspect-[4/5]" />
+                    <img src={asset('portfolio/Events&Influencers/Influencers Event.JPG')} alt="Influencers Event" className="object-cover aspect-[4/5]" loading="lazy" decoding="async" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Vitalik/N10.jpg')} alt="N10" className="object-cover aspect-[4/5]" />
+                    <img src={asset('portfolio/Vitalik/N10.jpg')} alt="N10" className="object-cover aspect-[4/5]" loading="lazy" decoding="async" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Vitalik/N11.jpg')} alt="N11" className="object-cover aspect-[4/5]" />
+                    <img src={asset('portfolio/Vitalik/N11.jpg')} alt="N11" className="object-cover aspect-[4/5]" loading="lazy" decoding="async" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Vitalik/N12.jpg')} alt="N12" className="object-cover aspect-[4/5]" />
+                    <img src={asset('portfolio/Vitalik/N12.jpg')} alt="N12" className="object-cover aspect-[4/5]" loading="lazy" decoding="async" />
                   </div>
                 </div>
               )}
@@ -587,25 +593,25 @@ function Services() {
                 <div className="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6">
                   <div>
                     <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                      <img src={asset('portfolio/Events&Influencers/Cyklar P.JPG')} alt="Cyklar P" className="object-cover aspect-square" />
+                      <img src={asset('portfolio/Events&Influencers/Cyklar P.JPG')} alt="Cyklar P" className="object-cover aspect-square" loading="lazy" decoding="async" />
                     </div>
                     <div className="p-3 text-xs text-zinc-600">Cyklar Product Launch</div>
                   </div>
                   <div>
                     <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                      <img src={asset('portfolio/Events&Influencers/Summer Fridays Launch Event.JPG')} alt="Summer Fridays Launch Event" className="object-cover aspect-square" />
+                      <img src={asset('portfolio/Events&Influencers/Summer Fridays Launch Event.JPG')} alt="Summer Fridays Launch Event" className="object-cover aspect-square" loading="lazy" decoding="async" />
                     </div>
                     <div className="p-3 text-xs text-zinc-600">Summer Fridays Launch Event</div>
                   </div>
                   <div>
                     <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                      <img src={asset('portfolio/Events&Influencers/Esports Awards Afterparty.png')} alt="Esports Awards Afterparty" className="object-cover aspect-square" />
+                      <img src={asset('portfolio/Events&Influencers/Esports Awards Afterparty.png')} alt="Esports Awards Afterparty" className="object-cover aspect-square" loading="lazy" decoding="async" />
                     </div>
                     <div className="p-3 text-xs text-zinc-600">Esports Awards Afterparty</div>
                   </div>
                   <div>
                     <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                      <img src={asset('portfolio/Events&Influencers/Influencers Event.JPG')} alt="Influencers Event" className="object-cover aspect-square" />
+                      <img src={asset('portfolio/Events&Influencers/Influencers Event.JPG')} alt="Influencers Event" className="object-cover aspect-square" loading="lazy" decoding="async" />
                     </div>
                     <div className="p-3 text-xs text-zinc-600">Influencers Event</div>
                   </div>
@@ -615,16 +621,16 @@ function Services() {
               {selectedService === 'Campaigns & Partnerships' && (
                 <div className="grid grid-cols-2 gap-2 md:gap-3 mb-4">
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Activations&Partnerships/OYSTERS LOVER HOUR-7.jpg')} alt="OYSTERS LOVER HOUR-7" className="object-cover aspect-[3/4]" />
+                    <img src={asset('portfolio/Activations&Partnerships/OYSTERS LOVER HOUR-7.jpg')} alt="OYSTERS LOVER HOUR-7" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Activations&Partnerships/1.png')} alt="1" className="object-cover aspect-[3/4]" />
+                    <img src={asset('portfolio/Activations&Partnerships/1.png')} alt="1" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Activations&Partnerships/2.png')} alt="2" className="object-cover aspect-[3/4]" />
+                    <img src={asset('portfolio/Activations&Partnerships/2.png')} alt="2" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Activations&Partnerships/3.png')} alt="3" className="object-cover aspect-[3/4]" />
+                    <img src={asset('portfolio/Activations&Partnerships/3.png')} alt="3" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                   </div>
                 </div>
               )}
@@ -632,16 +638,16 @@ function Services() {
               {selectedService === 'Graphic Design' && (
                 <div className="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6">
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Vitalik/N13.png')} alt="N13" className="object-cover aspect-[3/4]" />
+                    <img src={asset('portfolio/Vitalik/N13.png')} alt="N13" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Vitalik/N14.png')} alt="N14" className="object-cover aspect-[3/4]" />
+                    <img src={asset('portfolio/Vitalik/N14.png')} alt="N14" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Vitalik/N15.jpg')} alt="N15" className="object-cover aspect-[3/4] object-bottom" />
+                    <img src={asset('portfolio/Vitalik/N15.jpg')} alt="N15" className="object-cover aspect-[3/4] object-bottom" loading="lazy" decoding="async" />
                   </div>
                   <div className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-                    <img src={asset('portfolio/Activations&Partnerships/3.png')} alt="3" className="object-cover aspect-[3/4]" />
+                    <img src={asset('portfolio/Activations&Partnerships/3.png')} alt="3" className="object-cover aspect-[3/4]" loading="lazy" decoding="async" />
                   </div>
                 </div>
               )}
@@ -772,7 +778,9 @@ function PhotoVideoExamples() {
                 <img 
                   src={item.src} 
                   alt={item.alt} 
-                  className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:scale-[1.03]" 
+                  className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  decoding="async"
                 />
               )}
             </div>
@@ -829,7 +837,7 @@ function Portfolio() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {PORTFOLIO_IMAGES.map((img, i) => (
             <div key={i} className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200">
-              <img src={img.src} alt={img.alt} className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:scale-[1.03]" />
+              <img src={img.src} alt={img.alt} className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:scale-[1.03]" loading="lazy" decoding="async" />
             </div>
           ))}
         </div>
@@ -872,7 +880,7 @@ function ClientHighlights() {
         <div className="marquee__inner marquee__inner-fast">
             {CLIENT_HIGHLIGHT_IMAGES.concat(CLIENT_HIGHLIGHT_IMAGES).map((img, i) => (
               <div key={i} className="flex items-center justify-center px-8">
-                <img src={img.src} alt={img.alt} className="h-32 md:h-40 w-auto object-contain opacity-90" />
+                <img src={img.src} alt={img.alt} className="h-32 md:h-40 w-auto object-contain opacity-90" loading="lazy" decoding="async" />
               </div>
             ))}
         </div>
@@ -898,12 +906,12 @@ function ClientHighlights() {
           {/* Current pair */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 flex-1 order-1 md:order-2 w-full md:w-auto">
             <div className="flex-shrink-0 w-full max-w-xs sm:max-w-sm md:w-64 md:max-w-none h-[512px] sm:h-80 md:h-96 lg:h-[500px] overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-zinc-200">
-              <img src={BEFORE_AFTER_PAIRS[currentPairIndex].before} alt={`Before ${currentPairIndex + 1}`} className="w-full h-full object-cover" />
+              <img src={BEFORE_AFTER_PAIRS[currentPairIndex].before} alt={`Before ${currentPairIndex + 1}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
             </div>
             {/* Arrow between images */}
             <ArrowRight className="h-8 w-8 md:h-10 md:w-10 text-zinc-600 flex-shrink-0 rotate-90 md:rotate-0" />
             <div className="flex-shrink-0 w-full max-w-xs sm:max-w-sm md:w-64 md:max-w-none h-[512px] sm:h-80 md:h-96 lg:h-[500px] overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-zinc-200">
-              <img src={BEFORE_AFTER_PAIRS[currentPairIndex].after} alt={`After ${currentPairIndex + 1}`} className="w-full h-full object-cover" />
+              <img src={BEFORE_AFTER_PAIRS[currentPairIndex].after} alt={`After ${currentPairIndex + 1}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
             </div>
           </div>
 
