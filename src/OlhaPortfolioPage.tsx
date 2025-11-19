@@ -661,7 +661,7 @@ function PhotoVideoExamples() {
   
   const examples = [
     { type: 'image', src: asset('portfolio/content photo examples/Chez Mia _ Interior shoot-073.jpg'), alt: 'Interior Photography' },
-    { type: 'video', src: asset('portfolio/Vitalik/2025.09.27 influ video.mp4'), poster: asset('portfolio/Posters_video/Video_Examples_1.png'), alt: 'Influencer Video' },
+    { type: 'video', src: asset('portfolio/Vitalik/2025.09.27%20influ%20video.mp4'), poster: asset('portfolio/Posters_video/Video_Examples_1.png'), alt: 'Influencer Video' },
     { type: 'image', src: asset('portfolio/content photo examples/Chez Mia-055.jpg'), alt: 'Food Photography' },
     { type: 'image', src: asset('portfolio/Events&Influencers/Influencers Event.JPG'), alt: 'Event Photography' },
     { type: 'video', src: asset('portfolio/Vitalik/copy_6A1F0CDF-33CA-46A2-9273-C4AD5552033A.mp4'), poster: asset('portfolio/Posters_video/Video_Examples_2.png'), alt: 'Creative Video' },
