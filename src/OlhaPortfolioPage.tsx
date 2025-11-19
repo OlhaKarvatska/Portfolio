@@ -4,7 +4,7 @@ import { Instagram, Video, ChevronRight, Star, Image as ImageIcon, Users, BarCha
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const asset = (path: string) => import.meta.env.BASE_URL + path;
+const asset = (path: string) => (import.meta as { env: { BASE_URL: string } }).env.BASE_URL + path;
 
 const HERO_IMAGE = asset('portfolio/Vitalik/N1.jpg');
 
@@ -298,6 +298,7 @@ function About() {
                 playsInline
                 controls={false}
                 preload="metadata"
+                crossOrigin="anonymous"
                 onPlay={(e) => {
                   const playIcon = e.currentTarget.parentElement?.querySelector('.play-icon');
                   if (playIcon) playIcon.classList.add('hidden');
@@ -731,6 +732,7 @@ function PhotoVideoExamples() {
                     playsInline
                     controls={false}
                     preload="metadata"
+                    crossOrigin="anonymous"
                     onClick={(e) => {
                       if (e.currentTarget.paused) {
                         e.currentTarget.play();
